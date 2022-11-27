@@ -1,27 +1,162 @@
-body {
-    min-height: 100vh;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+*{
+  margin:0;
+  padding:0;
+}
+body{
+  color:#fff;
+  font-size:16px;
+  font-family: 'Poppins', sans-serif;
+  background: url(/Image/Blue\ Yellow\ Pink\ Portrait\ Photographic\ Senior\ High\ to\ Uni\ Education\ Presentation.png);
+  background-size: cover;
+  background-position:10% 10%; 
+  background-attachment:fixed;
+  background-repeat:no-repeat;
+  line-height:1.3;
+  font-weight:300;
 }
 
- .servicesing {
-    width: 200px;
-    height: 150px;
-    margin-left: 3rem;
-  } 
-
-.coming {
-    font-size: 8rem;
-    font-family: sans-serif;
-    font-weight: bold;
-    color: #F58426;
-    margin-left: 5rem;
-    margin-top: -.05rem;
+.logo-holder{
+  text-align:center;
+  padding-top:90px;
+  padding-bottom:60px;
+}
+.logo{
+  display:inline-block;
+  text-align:left;
+  position:relative;
+}
+.logo:before {
+  content: '';
+  position: absolute;
+  height: 90px;
+  left: -20px;
+  width: 40px;
+  top: -20px;
+  border-left: 3px solid #f58426;
+  border-top: 3px solid #f58426;
+  border-bottom: 3px solid #f58426;
+}
+.logo a{
+  display:inline-block;
+  color:#fff;
+  text-decoration:none;
+  
+}
+.logo a span{
+  display:block;
+  line-height:1;
+}
+.logo a span.main-title{
+  font-weight:600;
+  font-size:40px;
+}
+.logo a span.sub-title{
+  font-weight:300;
+  font-size:12px;
+  letter-spacing:1px;
+}
+.content-holder, .coundown-holder, .social-media{
+  text-align:center;
+}
+.content-holder h1{
+  margin:30px 0;
+  font-weight:600;
+  font-size:60px;
+  line-height:1;
+}
+.content-holder p{
+  letter-spacing:1px;
+  font-size:14px;
+  margin-bottom:30px;
+}
+.coundown-holder h2{
+  margin:30px 0;
+  font-size:25px;
+  font-weight:600;
+}
+#timer div{
+  font-weight:600;
+  font-size:40px;
+  display:inline-block;
+  margin:10px 50px 30px;
+}
+#timer div span{
+  display:block;
+  font-size:14px;
+}
+.social-media ul{
+  list-style:none;
+}
+.social-media ul li{
+  display:inline-block;
+  margin:20px;
+}
+.social-media ul li a{
+  color:#fff;
+  text-decoration:none;
+  position:relative;
+}
+.social-media ul li a:hover{
+  color: #f58426;
+}
+.social-media ul li a:hover i:after{
+  content: attr(data-tooltip);
+  position:absolute;
+  background: #f58426;
+  left: -35px;
+  top: -25px;
+  padding: 3px 8px;
+  display: inline-block;
+  color: #000;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  width: 70px;
+  border-radius: 10px;
 }
 
-.sentence {
-    font-size: 4rem;
-    font-family: sans-serif;
-    width: 50rem;
-    margin-left: 5rem;
-    margin-top: -2em;
-    color: #F58426;
+.page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress-bar {
+    width: 300px;
+    height: 40px;
+    border: 2px solid #999;
+    padding: 4px;
+    border-radius: 50px;
+  }
+  
+  .progress {
+    width: 20%;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: #f58426;
+    border-radius: 50px;
+    animation-name: loading;
+    animation: loading 5s linear 2s infinite;
+  }
+  
+  @keyframes loading {
+    0%   {width: 20%;}
+    50%  {width: 50%;}
+    100% {width: 100%;}
+  }
+
+
+@media only screen and (max-width:736px) {
+  body{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .overlay{
+    height: 140%;
+  }
+  
+
 }
